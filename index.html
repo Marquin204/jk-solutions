@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--
+      ============================================================
+      JK TECNOLOGI - Landing page única (autocontenida, sin build)
+      ------------------------------------------------------------
+      ANTES DE PUBLICAR, REEMPLAZA ESTOS DATOS:
+      1. WhatsApp: busca "584120000000" (formato internacional sin +)
+      2. Teléfono visible: "+58 412 000 0000"
+      3. Email: "hola@jktecnologi.com"
+      4. Redes sociales: enlaces "#" del footer
+      5. Dominio: "https://www.jktecnologi.com" (canonical y JSON-LD)
+      ============================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JK Tecnologi · Soluciones TI en Caracas — Infraestructura, Soporte y Web</title>
+    <meta name="description" content="JK Tecnologi: infraestructura de redes, CCTV, Wi-Fi mesh, soporte técnico recurrente con SLA y desarrollo web para empresas en Caracas. Auditoría gratuita.">
+    <link rel="canonical" href="https://www.jktecnologi.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_VE">
+    <meta property="og:title" content="JK Tecnologi · Soluciones TI en Caracas">
+    <meta property="og:description" content="Infraestructura, CCTV, soporte recurrente con SLA y desarrollo web para tu empresa. Cotiza gratis por WhatsApp.">
+    <meta property="og:url" content="https://www.jktecnologi.com/">
+    <meta name="theme-color" content="#0b1220">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EJK%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "JK Tecnologi",
+      "description": "Infraestructura de redes, CCTV, soporte técnico TI recurrente y desarrollo web para empresas.",
+      "url": "https://www.jktecnologi.com",
+      "telephone": "+58 412 000 0000",
+      "email": "hola@jktecnologi.com",
+      "areaServed": { "@type": "City", "name": "Caracas" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Caracas",
+        "addressCountry": "VE"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+
+    <style>
+        /* ============ VARIABLES Y BASE ============ */
+        :root {
+            --brand: #2563eb;
+            --brand-dark: #1d4ed8;
+            --cyan: #06b6d4;
+            --ink: #0f172a;
+            --slate: #334155;
+            --muted: #64748b;
+            --line: #e2e8f0;
+            --surface: #f8fafc;
+            --card: #ffffff;
+            --amber-bg: #fef9c3;
+            --amber-text: #854d0e;
+            --ok: #16a34a;
+            --wa: #25d366;
+            --radius: 18px;
+            --shadow-md: 0 10px 30px -12px rgba(15, 23, 42, 0.15);
+            --shadow-lg: 0 25px 60px -20px rgba(15, 23, 42, 0.25);
+            --header-h: 72px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--header-h) + 20px);
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--slate);
+            background: var(--card);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img, svg { display: block; }
+        ul, ol { list-style: none; }
+        a { color: inherit; }
+
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        :focus-visible {
+            outline: 3px solid rgba(37, 99, 235, 0.5);
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: 8px;
+            z-index: 2000;
+            background: var(--brand);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus { left: 8px; }
+
+        .icon {
+            width: 1.15em;
+            height: 1.15em;
+            flex-shrink: 0;
+        }
+
+        /* ============ BOTONES ============ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 30px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+        }
+        .btn:hover { transform: translateY(-2px); }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+            color: #fff;
+            box-shadow: 0 10px 25px -8px rgba(37, 99, 235, 0.5);
+        }
+        .btn-primary:hover { box-shadow: 0 14px 30px -8px rgba(37, 99, 235, 0.55); }
+
+        .btn-outline {
+            background: transparent;
+            color: #e2e8f0;
+            border: 1px solid rgba(226, 232, 240, 0.35);
+        }
+        .btn-outline:hover {
+            border-color: var(--brand);
+            color: #fff;
+            background: rgba(37, 99, 235, 0.15);
+        }
+
+        .btn-white {
+            background: #fff;
+            color: var(--brand-dark);
+            box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.35);
+        }
+        .btn-white:hover { background: #eff6ff; }
+
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.14);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
+        .btn-glass:hover { background: rgba(255, 255, 255, 0.22); }
+
+        /* ============ HEADER ============ */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: var(--header-h);
+            background: rgba(255, 255, 255, 0.82);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid transparent;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        header.scrolled {
+            border-color: var(--line);
+            box-shadow: 0 4px 20px -8px rgba(15, 23, 42, 0.12);
+        }
+
+        .nav-container {
+            height: var(--header-h);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--ink);
+            letter-spacing: -0.5px;
+        }
+        .logo-mark {
+            display: grid;
+            place-items: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--brand), var(--cyan));
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 0;
+            box-shadow: 0 6px 14px -4px rgba(37, 99, 235, 0.45);
+        }
+        .logo b { color: var(--brand); font-weight: 800; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .nav-links > a {
+            text-decoration: none;
+            color: var(--muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .nav-links > a:hover,
+        .nav-links > a.active { color: var(--brand); }
+        .nav-links .btn { padding: 10px 22px; font-size: 0.9rem; }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--ink);
+            width: 44px;
+            height: 44px;
+            place-items: center;
+        }
+        .menu-btn .ic-close { display: none; }
+        header.menu-open .ic-menu { display: none; }
+        header.menu-open .ic-close { display: block; }
+
+        /* ============ HERO ============ */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: #0b1220;
+            color: #e2e8f0;
+            padding: calc(var(--header-h) + clamp(56px, 9vw, 110px)) 0 clamp(64px, 9vw, 110px);
+        }
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+        }
+        .hero::before {
+            width: 520px;
+            height: 520px;
+            background: rgba(37, 99, 235, 0.35);
+            top: -160px;
+            left: -120px;
+        }
+        .hero::after {
+            width: 420px;
+            height: 420px;
+            background: rgba(6, 182, 212, 0.22);
+            bottom: -140px;
+            right: -80px;
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: clamp(36px, 5vw, 64px);
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #93c5fd;
+            background: rgba(37, 99, 235, 0.14);
+            border: 1px solid rgba(147, 197, 253, 0.25);
+            padding: 7px 16px;
+            border-radius: 999px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1.2px;
+            color: #fff;
+            margin-bottom: 18px;
+        }
+        .hero h1 .grad {
+            background: linear-gradient(90deg, #60a5fa, #22d3ee);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p.lead {
+            font-size: clamp(1rem, 1.6vw, 1.15rem);
+            color: #94a3b8;
+            max-width: 54ch;
+            margin-bottom: 30px;
+        }
+        .hero p.lead strong { color: #e2e8f0; }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 34px;
+        }
+
+        .hero-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.83rem;
+            font-weight: 500;
+            color: #cbd5e1;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            padding: 8px 14px;
+            border-radius: 999px;
+        }
+        .chip .icon { color: #38bdf8; width: 1em; height: 1em; }
+
+        /* --- Consola simulada del hero --- */
+        .hero-visual { position: relative; }
+
+        .console {
+            background: linear-gradient(165deg, #121d36, #0b1324);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+        .console-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 18px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+        }
+        .console-bar i {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+        }
+        .console-bar i:nth-child(1) { background: #f87171; }
+        .console-bar i:nth-child(2) { background: #fbbf24; }
+        .console-bar i:nth-child(3) { background: #34d399; }
+        .console-bar span {
+            margin-left: auto;
+            font-family: ui-monospace, Consolas, monospace;
+            font-size: 0.75rem;
+            color: #64748b;
+            letter-spacing: 0.5px;
+        }
+
+        .console-body { padding: 20px 22px 24px; }
+
+        .status-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 11px 0;
+            border-bottom: 1px dashed rgba(148, 163, 184, 0.16);
+            font-size: 0.92rem;
+        }
+        .status-row:last-of-type { border-bottom: none; }
+        .status-row .icon { color: #38bdf8; width: 1.2em; height: 1.2em; }
+        .status-row .label { color: #cbd5e1; font-weight: 500; }
+        .status-row .val {
+            margin-left: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #a7f3d0;
+            font-family: ui-monospace, Consolas, monospace;
+            font-size: 0.8rem;
+        }
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #34d399;
+            box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55);
+            animation: pulse 2.2s infinite;
+        }
+        @keyframes pulse {
+            to { box-shadow: 0 0 0 9px rgba(52, 211, 153, 0); }
+        }
+
+        .bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+            height: 64px;
+            margin-top: 18px;
+            padding: 14px 14px 0;
+            border-top: 1px solid rgba(148, 163, 184, 0.14);
+        }
+        .bars span {
+            flex: 1;
+            border-radius: 5px 5px 2px 2px;
+            background: linear-gradient(180deg, #38bdf8, #2563eb);
+            opacity: 0.85;
+            min-height: 12%;
+        }
+        .bars-caption {
+            font-size: 0.72rem;
+            color: #64748b;
+            padding: 8px 14px 14px;
+            text-align: right;
+            font-family: ui-monospace, Consolas, monospace;
+        }
+
+        .float-chip {
+            position: absolute;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.96);
+            color: var(--ink);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 10px 16px;
+            border-radius: 999px;
+            box-shadow: var(--shadow-md);
+            animation: floaty 5s ease-in-out infinite alternate;
+        }
+        .float-chip .icon { color: var(--brand); width: 1.15em; height: 1.15em; }
+        .fc-1 { top: -16px; right: -8px; }
+        .fc-2 { bottom: -14px; left: -10px; animation-delay: 2s; }
+        @keyframes floaty {
+            from { transform: translateY(-5px); }
+            to   { transform: translateY(6px); }
+        }
+
+        /* ============ SECCIONES ============ */
+        section { padding: clamp(64px, 9vw, 104px) 0; }
+        section.bg-light { background: var(--surface); }
+
+        .section-head {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto clamp(40px, 6vw, 60px);
+        }
+        .section-head h2 {
+            font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: -0.8px;
+            margin-bottom: 12px;
+        }
+        .section-head h2 span { color: var(--brand); }
+        .section-head p { color: var(--muted); font-size: 1.05rem; }
+
+        /* --- Servicios / tarjetas --- */
+        .cards-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 26px;
+        }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 30px 26px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #bfdbfe;
+            box-shadow: var(--shadow-md);
+        }
+        .card-icon {
+            display: grid;
+            place-items: center;
+            width: 54px;
+            height: 54px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #eff6ff, #e0f2fe);
+            color: var(--brand);
+            margin-bottom: 18px;
+        }
+        .card-icon .icon { width: 26px; height: 26px; }
+        .card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+        .card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: var(--brand-dark);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 5px 14px;
+            border-radius: 999px;
+        }
+
+        /* --- Paquetes --- */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .package-card {
+            position: relative;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 38px 32px 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .package-card:hover {
+            border-color: var(--brand);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+        .tag {
+            position: absolute;
+            top: -13px;
+            left: 26px;
+            background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 16px;
+            border-radius: 999px;
+            box-shadow: 0 6px 14px -4px rgba(37, 99, 235, 0.5);
+        }
+        .package-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 4px;
+        }
+        .package-card .sub {
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+        .package-card ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.95rem;
+        }
+        .package-card ul li:last-child { border-bottom: none; }
+        .package-card ul li .icon {
+            color: var(--brand);
+            margin-top: 4px;
+            width: 1.05em;
+            height: 1.05em;
+        }
+        .incentive {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background: var(--amber-bg);
+            color: var(--amber-text);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 9px 18px;
+            border-radius: 999px;
+            margin-top: 16px;
+        }
+
+        /* --- Tabla de planes --- */
+        .table-wrapper {
+            overflow-x: auto;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--card);
+            box-shadow: var(--shadow-md);
+        }
+        table {
+            width: 100%;
+            min-width: 680px;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        thead th {
+            background: var(--ink);
+            color: #fff;
+            text-align: left;
+            font-weight: 600;
+            padding: 18px 22px;
+        }
+        thead th:not(:first-child),
+        td:not(:first-child) { text-align: center; }
+        tbody td {
+            padding: 16px 22px;
+            border-bottom: 1px solid #f1f5f9;
+            vertical-align: middle;
+        }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover td { background: var(--surface); }
+        td:first-child { font-weight: 600; color: var(--ink); }
+        .check { color: var(--ok); font-weight: 700; }
+        .times { color: #94a3b8; }
+        .best-plan { color: var(--brand-dark); font-weight: 500; }
+
+        .table-note {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.88rem;
+            margin-top: 18px;
+        }
+
+        /* --- Proceso --- */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+            counter-reset: paso;
+        }
+        .step {
+            position: relative;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+        .step:hover { border-color: #bfdbfe; transform: translateY(-4px); }
+        .step-num {
+            counter-increment: paso;
+            display: grid;
+            place-items: center;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--brand), var(--cyan));
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 18px -6px rgba(37, 99, 235, 0.5);
+        }
+        .step-num::before { content: counter(paso); }
+        .step h4 {
+            font-size: 1.05rem;
+            color: var(--ink);
+            margin-bottom: 12px;
+        }
+        .step ul li {
+            font-size: 0.9rem;
+            color: var(--muted);
+            padding: 5px 0;
+            border-bottom: 1px dashed #f1f5f9;
+        }
+        .step ul li:last-child { border-bottom: none; }
+        .step strong { color: var(--slate); }
+
+        /* --- Testimonios --- */
+        .testimonial {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 30px 28px;
+            position: relative;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+        .testimonial:hover { border-color: #dbeafe; transform: translateY(-4px); }
+        .testimonial::before {
+            content: "\201C";
+            position: absolute;
+            top: 6px;
+            right: 22px;
+            font-size: 4.5rem;
+            font-family: Georgia, serif;
+            color: #dbeafe;
+            line-height: 1;
+        }
+        .stars {
+            color: #f59e0b;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+        .testimonial p {
+            font-style: italic;
+            color: var(--slate);
+            margin-bottom: 18px;
+            font-size: 0.97rem;
+        }
+        .author { font-weight: 700; color: var(--ink); }
+        .company { color: var(--muted); font-size: 0.87rem; }
+
+        /* --- CTA --- */
+        .cta-band {
+            background: linear-gradient(120deg, var(--brand-dark), var(--brand) 55%, var(--cyan));
+            border-radius: 26px;
+            padding: clamp(40px, 6vw, 60px);
+            text-align: center;
+            color: #fff;
+            box-shadow: var(--shadow-lg);
+        }
+        .cta-band h2 {
+            font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+            font-weight: 800;
+            letter-spacing: -0.6px;
+            margin-bottom: 12px;
+        }
+        .cta-band p {
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 56ch;
+            margin: 0 auto 28px;
+        }
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        /* --- FAQ --- */
+        .faq-list {
+            max-width: 780px;
+            margin: 0 auto;
+            display: grid;
+            gap: 12px;
+        }
+        details {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 18px 24px;
+            transition: border-color 0.3s ease;
+        }
+        details[open] { border-color: #bfdbfe; }
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--ink);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary .chev {
+            width: 20px;
+            height: 20px;
+            color: var(--brand);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        details[open] .chev { transform: rotate(180deg); }
+        .answer {
+            color: var(--muted);
+            font-size: 0.95rem;
+            padding-top: 12px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #0b1220;
+            color: #94a3b8;
+            padding: clamp(56px, 8vw, 80px) 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 44px;
+        }
+        .footer-brand .logo { color: #fff; margin-bottom: 14px; }
+        .footer-brand p {
+            font-size: 0.93rem;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+        footer h4 {
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        footer .flinks a {
+            display: block;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.93rem;
+            margin-bottom: 10px;
+            transition: color 0.2s;
+        }
+        footer .flinks a:hover { color: #fff; }
+        footer .flinks a .icon {
+            width: 1em;
+            height: 1em;
+            margin-right: 8px;
+            vertical-align: -0.12em;
+        }
+        .social-row { display: flex; gap: 12px; }
+        .social-row a {
+            display: grid;
+            place-items: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            color: #cbd5e1;
+            transition: all 0.25s ease;
+        }
+        .social-row a:hover {
+            background: var(--brand);
+            border-color: var(--brand);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        .social-row .icon { width: 19px; height: 19px; }
+        .footer-bottom {
+            border-top: 1px solid rgba(148, 163, 184, 0.15);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.87rem;
+            color: #64748b;
+        }
+
+        /* --- WhatsApp flotante --- */
+        .wa-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 1200;
+            display: grid;
+            place-items: center;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: var(--wa);
+            color: #fff;
+            box-shadow: 0 12px 30px -8px rgba(37, 211, 102, 0.65);
+            transition: transform 0.25s ease;
+        }
+        .wa-float:hover { transform: scale(1.08); }
+        .wa-float .icon { width: 28px; height: 28px; }
+
+        /* --- Animaciones de scroll --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.in { opacity: 1; transform: none; }
+        .reveal.d1 { transition-delay: 0.08s; }
+        .reveal.d2 { transition-delay: 0.16s; }
+        .reveal.d3 { transition-delay: 0.24s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.001s !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001s !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+        }
+
+        /* --- Catalogo Flipbook --- */
+        .catalog-shell { max-width: 1000px; margin: 0 auto; }
+
+        #book {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            aspect-ratio: 16 / 10;
+            perspective: 2200px;
+            background: #dbe3ee;
+            border-radius: 18px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            display: flex;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: pan-y;
+        }
+        #book::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 100%;
+            background: linear-gradient(to right, #c3cddd, #eef2f7 30%, #ffffff 50%, #eef2f7 70%, #c3cddd);
+            z-index: 5;
+            border-radius: 2px;
+            box-shadow: inset -2px 0 8px rgba(15, 23, 42, 0.06), inset 2px 0 8px rgba(15, 23, 42, 0.06);
+        }
+
+        .bk-page {
+            position: relative;
+            flex: 1;
+            height: 100%;
+            padding: clamp(18px, 3vw, 34px);
+            background: #ffffff;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            transition: opacity 0.18s ease;
+        }
+        .bk-page::-webkit-scrollbar { width: 4px; }
+        .bk-page::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+        #bkLeft { border-radius: 18px 0 0 18px; background: #fafcff; }
+        #bkRight { border-radius: 0 18px 18px 0; }
+
+        #bkTurn {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            transform-origin: left center;
+            transform-style: preserve-3d;
+            transition: transform 0.65s cubic-bezier(0.35, 0.1, 0.2, 1);
+            z-index: 10;
+            cursor: grab;
+            will-change: transform;
+        }
+        #bkTurn.dragging { transition: none; cursor: grabbing; }
+        #bkTurn .face {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            background: #ffffff;
+            padding: clamp(18px, 3vw, 34px);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            scrollbar-width: thin;
+        }
+        #bkTurn .face::-webkit-scrollbar { width: 4px; }
+        #bkTurn .face::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+        #bkTurn .face.front {
+            border-radius: 0 18px 18px 0;
+            box-shadow: -6px 0 18px rgba(15, 23, 42, 0.05);
+        }
+        #bkTurn .face.back {
+            transform: rotateY(180deg);
+            border-radius: 18px 0 0 18px;
+            background: #fafcff;
+            box-shadow: 6px 0 18px rgba(15, 23, 42, 0.05);
+        }
+        #bkTurn .shade {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            border-radius: 0 18px 18px 0;
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.03), rgba(15, 23, 42, 0.14));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        #bkTurn.flipping .shade { opacity: 1; }
+
+        /* Contenido interno de las paginas del libro */
+        .pg {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            font-size: 0.95rem;
+            color: var(--slate);
+        }
+        .pg h3 {
+            font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: -0.4px;
+            margin-bottom: 4px;
+        }
+        .pg h3 span { color: var(--brand); }
+        .pg .sub {
+            color: var(--muted);
+            font-size: 0.86rem;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 10px;
+            margin-bottom: 14px;
+        }
+        .pg-kicker {
+            display: inline-block;
+            background: #eff6ff;
+            color: var(--brand-dark);
+            font-weight: 600;
+            font-size: 0.7rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 999px;
+        }
+        .pg-list li {
+            display: flex;
+            gap: 10px;
+            padding: 7px 0;
+            border-bottom: 1px solid #f1f5f9;
+            align-items: flex-start;
+        }
+        .pg-list li:last-child { border-bottom: none; }
+        .pg-list .icon {
+            color: var(--brand);
+            margin-top: 3px;
+            width: 1.05em;
+            height: 1.05em;
+        }
+        .pg-cover {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 6px;
+        }
+        .pg-cover .mark {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, var(--brand), var(--cyan));
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.5rem;
+            box-shadow: 0 12px 24px -8px rgba(37, 99, 235, 0.5);
+            margin-bottom: 8px;
+        }
+        .pg-cover h3 { font-size: clamp(1.3rem, 2.4vw, 1.9rem); }
+        .pg-foot {
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px dashed #e2e8f0;
+            font-size: 0.72rem;
+            color: #94a3b8;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .pg-pkg {
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .pg-pkg h4 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            color: var(--ink);
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+        }
+        .pg-pkg h4 .tagpill {
+            background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+            color: #fff;
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 999px;
+        }
+        .pg-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            flex: 1;
+        }
+        .pg-col {
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 14px;
+            background: #fbfdff;
+        }
+        .pg-col.hl { border-color: #93c5fd; background: #f5f9ff; }
+        .pg-col h4 { font-size: 0.95rem; color: var(--ink); margin-bottom: 8px; }
+        .pg-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            font-size: 0.78rem;
+            padding: 6px 0;
+            border-bottom: 1px dashed #eef2f7;
+        }
+        .pg-row:last-child { border-bottom: none; }
+        .pg-row b { color: var(--ink); flex-shrink: 0; }
+        .pg-row span { text-align: right; }
+        .pg-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin: 6px 0 16px;
+        }
+        .pg-step {
+            text-align: center;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 10px 6px;
+            font-size: 0.72rem;
+            color: var(--slate);
+        }
+        .pg-step b {
+            display: grid;
+            place-items: center;
+            width: 26px;
+            height: 26px;
+            margin: 0 auto 6px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--brand), var(--cyan));
+            color: #fff;
+            font-size: 0.8rem;
+        }
+        .pg-cta {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .pg-fin {
+            flex: 1;
+            display: grid;
+            place-items: center;
+            color: #94a3b8;
+            text-align: center;
+        }
+        .pg-fin .icon { width: 40px; height: 40px; margin: 0 auto 10px; color: #cbd5e1; }
+
+        .bk-toolbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            margin-top: 26px;
+            flex-wrap: wrap;
+        }
+        .bk-btn { padding: 11px 26px; font-size: 0.92rem; border: none; cursor: pointer; }
+        .bk-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+            transform: none !important;
+            box-shadow: none;
+        }
+        .bk-indicator {
+            font-weight: 600;
+            color: var(--ink);
+            background: #fff;
+            border: 1px solid var(--line);
+            padding: 8px 18px;
+            border-radius: 999px;
+            min-width: 86px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        .bk-hint {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-top: 14px;
+        }
+        .bk-hint .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.12em;
+            margin-right: 6px;
+        }
+        .bk-hint a { color: var(--brand); font-weight: 600; text-decoration: none; }
+        .bk-hint a:hover { text-decoration: underline; }
+
+        @media (max-width: 760px) {
+            #book { aspect-ratio: 3 / 4; }
+            .pg-cols, .pg-steps { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 430px) {
+            .pg-cols { grid-template-columns: 1fr; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            #bkTurn { transition: none; }
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 980px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero p.lead { max-width: 100%; }
+            .hero-visual { max-width: 520px; margin: 0 auto; }
+            .packages-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 880px) {
+            .menu-btn { display: grid; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: calc(var(--header-h) + 8px);
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 6px;
+                background: #fff;
+                border: 1px solid var(--line);
+                border-radius: 16px;
+                padding: 16px;
+                box-shadow: var(--shadow-lg);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links > a { padding: 10px 14px; border-radius: 10px; }
+            .nav-links > a:not(.btn):hover { background: var(--surface); }
+            .nav-links .btn { justify-content: center; margin-top: 6px; }
+        }
+
+        @media (max-width: 640px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .cta-band { border-radius: 20px; }
+            .fc-1 { top: -12px; right: 4px; }
+            .fc-2 { bottom: -12px; left: 4px; }
+        }
+    </style>
+</head>
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+        <symbol id="i-cctv" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="1" y="5" width="15" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="i-server" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></g></symbol>
+        <symbol id="i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/></g></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+        <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></g></symbol>
+        <symbol id="i-code" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></g></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></g></symbol>
+        <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+        <symbol id="i-gift" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></g></symbol>
+        <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></g></symbol>
+    </svg>
+
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <!-- ==================== HEADER ==================== -->
+    <header id="header">
+        <div class="container nav-container">
+            <a class="logo" href="#inicio" aria-label="JK Tecnologi, ir al inicio">
+                <span class="logo-mark">JK</span>
+                Tec<b>nologi</b>
+            </a>
+            <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+                <svg class="ic-menu icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                <svg class="ic-close icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+                <a href="#servicios">Servicios</a>
+                <a href="#paquetes">Paquetes</a>
+                <a href="#soporte">Planes</a>
+                <a href="#proceso">Proceso</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20quiero%20una%20cotizaci%C3%B3n" class="btn btn-primary" target="_blank" rel="noopener">Cotizar gratis</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+
+        <!-- ==================== HERO ==================== -->
+        <section class="hero" id="inicio">
+            <div class="container hero-grid">
+                <div>
+                    <span class="hero-badge">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>
+                        Caracas, Venezuela · Comercios, oficinas y consultorios
+                    </span>
+                    <h1>Infraestructura y <span class="grad">soporte TI</span> que mantiene tu negocio en línea</h1>
+                    <p class="lead">
+                        En <strong>JK Tecnologi</strong> diseñamos, instalamos y mantenemos la tecnología de tu empresa:
+                        redes, CCTV, Wi-Fi, respaldos y desarrollo web. Un solo equipo para toda tu operación digital.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#paquetes" class="btn btn-primary">Ver paquetes</a>
+                        <a href="https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20quiero%20cotizar%20un%20servicio" class="btn btn-outline" target="_blank" rel="noopener">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+                            Cotiza por WhatsApp
+                        </a>
+                    </div>
+                    <ul class="hero-chips" aria-label="Tecnologías que dominamos">
+                        <li class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cctv"/></svg>CCTV IP</li>
+                        <li class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-server"/></svg>Cableado Cat6</li>
+                        <li class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wifi"/></svg>Wi-Fi Mesh</li>
+                        <li class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg>Control de acceso</li>
+                        <li class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-db"/></svg>Backups</li>
+                        <li class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg>Páginas web</li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual">
+                    <figure class="console" role="img" aria-label="Panel de monitoreo: cámaras, Wi-Fi, respaldos y SLA operando correctamente">
+                        <div class="console-bar"><i></i><i></i><i></i><span>jk-noc · monitoreo</span></div>
+                        <div class="console-body">
+                            <div class="status-row">
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cctv"/></svg>
+                                <span class="label">CCTV · 8 cámaras</span>
+                                <span class="val"><i class="dot"></i>en línea</span>
+                            </div>
+                            <div class="status-row">
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wifi"/></svg>
+                                <span class="label">Wi-Fi Mesh · 3 nodos</span>
+                                <span class="val"><i class="dot"></i>óptimo</span>
+                            </div>
+                            <div class="status-row">
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-db"/></svg>
+                                <span class="label">Backups diarios</span>
+                                <span class="val"><i class="dot"></i>al día</span>
+                            </div>
+                            <div class="status-row">
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg>
+                                <span class="label">SLA presencial</span>
+                                <span class="val">&lt; 4 horas</span>
+                            </div>
+                        </div>
+                        <div class="bars" aria-hidden="true">
+                            <span style="height:35%"></span><span style="height:55%"></span><span style="height:42%"></span>
+                            <span style="height:70%"></span><span style="height:58%"></span><span style="height:82%"></span>
+                            <span style="height:64%"></span><span style="height:92%"></span><span style="height:74%"></span>
+                            <span style="height:60%"></span><span style="height:86%"></span><span style="height:96%"></span>
+                        </div>
+                        <figcaption class="bars-caption">red corporativa · chacao</figcaption>
+                    </figure>
+                    <span class="float-chip fc-1">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"/></svg>
+                        Respuesta &lt; 4 h
+                    </span>
+                    <span class="float-chip fc-2">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg>
+                        Garantía postventa
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SERVICIOS ==================== -->
+        <section id="servicios">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>Nuestros <span>Servicios</span></h2>
+                    <p>Tres líneas de solución que cubren todo el ciclo tecnológico de tu empresa.</p>
+                </div>
+                <div class="cards-3">
+                    <article class="card reveal">
+                        <div class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-server"/></svg></div>
+                        <h3>Infraestructura &amp; Redes</h3>
+                        <p>Proyectos llave en mano: cableado estructurado certificado, CCTV, Wi-Fi mesh y control de acceso biométrico.</p>
+                        <span class="badge">Instalación certificada</span>
+                    </article>
+                    <article class="card reveal d1">
+                        <div class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg></div>
+                        <h3>Soporte TI Recurrente</h3>
+                        <p>Planes mensuales con atención remota ilimitada, mantenimiento preventivo programado y SLA presencial garantizado.</p>
+                        <span class="badge">SLA desde 4 horas</span>
+                    </article>
+                    <article class="card reveal d2">
+                        <div class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg></div>
+                        <h3>Desarrollo Digital &amp; Web</h3>
+                        <p>Páginas web, portales corporativos y automatizaciones que fortalecen tu presencia y generan nuevas ventas.</p>
+                        <span class="badge">Entrega por hitos</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PAQUETES ==================== -->
+        <section id="paquetes" class="bg-light">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>Paquetes de <span>Infraestructura</span></h2>
+                    <p>Soluciones empaquetadas para pymes, consultorios, oficinas, colegios y depositos.</p>
+                </div>
+                <div class="packages-grid">
+                    <article class="package-card reveal">
+                        <span class="tag">Entrada</span>
+                        <h3>PyME Conectada &amp; Segura</h3>
+                        <p class="sub">Ideal para comercios y consultorios</p>
+                        <ul>
+                            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>CCTV de 4 a 8 cámaras IP/HD con visualización remota desde tu teléfono</li>
+                            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Router corporativo + access point Wi-Fi de alta densidad</li>
+                            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Diagnóstico eléctrico y verificación de UPS para equipos críticos</li>
+                        </ul>
+                        <span class="incentive">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gift"/></svg>
+                            Incluye 1 mes de soporte básico gratuito
+                        </span>
+                    </article>
+                    <article class="package-card reveal d1">
+                        <span class="tag">Pro</span>
+                        <h3>Red Corporativa Pro</h3>
+                        <p class="sub">Ideal para oficinas, colegios y depósitos</p>
+                        <ul>
+                            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Cableado estructurado Cat6 certificable con etiquetado ANSI/TIA</li>
+                            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Wi-Fi mesh corporativo con roaming sin interrupciones</li>
+                            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Control de acceso: biometria, cerraduras magnéticas y VLANs segmentadas</li>
+                        </ul>
+                        <span class="incentive">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"/></svg>
+                            Diseño escalable para múltiples ambientes
+                        </span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PLANES DE SOPORTE ==================== -->
+        <section id="soporte">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>Planes de <span>Soporte Recurrente</span></h2>
+                    <p>Mantenimiento mensual por estacion de trabajo para garantizar la continuidad operativa de tu negocio.</p>
+                </div>
+                <div class="table-wrapper reveal">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Característica</th>
+                                <th scope="col">Plan Mantenimiento Base</th>
+                                <th scope="col">Plan Operaciones Continuas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Perfil de cliente</td>
+                                <td>Oficinas administrativas y comercios pequeños</td>
+                                <td class="best-plan">Empresas con alta dependencia tecnológica y cajas/POS</td>
+                            </tr>
+                            <tr>
+                                <td>Limpieza física / lógica</td>
+                                <td>Trimestral (soplado, pasta térmica, antivirus)</td>
+                                <td>Bimestral física + lógica mensual programada</td>
+                            </tr>
+                            <tr>
+                                <td>Atención remota</td>
+                                <td>Ilimitada (8 am - 5 pm)</td>
+                                <td class="best-plan"><span class="check">&#10003;</span> Prioritaria (8 am - 6 pm)</td>
+                            </tr>
+                            <tr>
+                                <td>SLA presencial</td>
+                                <td>Respuesta en menos de 24 h hábiles</td>
+                                <td class="best-plan"><span class="check">&#10003;</span> Crítica en menos de 4 horas</td>
+                            </tr>
+                            <tr>
+                                <td>Respaldos (backups)</td>
+                                <td>Semanal en disco externo o nube</td>
+                                <td class="best-plan"><span class="check">&#10003;</span> Diario automatizado + pruebas de restauración</td>
+                            </tr>
+                            <tr>
+                                <td>Gestión de infraestructura</td>
+                                <td><span class="times">&#10005;</span> No incluida</td>
+                                <td class="best-plan"><span class="check">&#10003;</span> Monitoreo de DVR, switch, router y POS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-note">* Precios según cantidad de equipos. Cotización personalizada sin compromiso.</p>
+            </div>
+        </section>
+
+        <!-- ==================== PROCESO ==================== -->
+        <section id="proceso" class="bg-light">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>Cómo <span>Trabajamos</span></h2>
+                    <p>Un proceso claro en cuatro fases, desde el diagnóstico hasta la entrega formal.</p>
+                </div>
+                <ol class="process-grid">
+                    <li class="step reveal">
+                        <div class="step-num" aria-hidden="true"></div>
+                        <h4>Levantamiento</h4>
+                        <ul>
+                            <li>Inspección técnica en sitio</li>
+                            <li>Inventario de equipos</li>
+                            <li>Ficha de diagnostico</li>
+                        </ul>
+                    </li>
+                    <li class="step reveal d1">
+                        <div class="step-num" aria-hidden="true"></div>
+                        <h4>Propuesta y cierre</h4>
+                        <ul>
+                            <li>Cotización formal</li>
+                            <li>Firma de contrato</li>
+                            <li><strong>Anticipo del 50%</strong></li>
+                        </ul>
+                    </li>
+                    <li class="step reveal d2">
+                        <div class="step-num" aria-hidden="true"></div>
+                        <h4>Ejecución y calidad</h4>
+                        <ul>
+                            <li>Instalación / mantenimiento</li>
+                            <li>Etiquetado profesional</li>
+                            <li>Pruebas de estrés y velocidad</li>
+                        </ul>
+                    </li>
+                    <li class="step reveal d3">
+                        <div class="step-num" aria-hidden="true"></div>
+                        <h4>Entrega y postventa</h4>
+                        <ul>
+                            <li>Acta de conformidad</li>
+                            <li>Inducción al usuario</li>
+                            <li><strong>Saldo restante (50%)</strong></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ==================== TESTIMONIOS ==================== -->
+        <section id="testimonios">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>Lo que dicen <span>nuestros clientes</span></h2>
+                    <p>Empresas de Caracas que ya confían en nuestro trabajo.</p>
+                </div>
+                <div class="cards-3">
+                    <article class="testimonial reveal">
+                        <div class="stars" aria-label="Calificación: 5 de 5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>Con su instalación de CCTV y red, nuestro consultorio quedó completamente seguro. El soporte mensual nos da total tranquilidad.</p>
+                        <div class="author">Dra. María F.</div>
+                        <div class="company">Consultorio Médico · Chacao</div>
+                    </article>
+                    <article class="testimonial reveal d1">
+                        <div class="stars" aria-label="Calificación: 5 de 5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>Pasamos de caídas constantes de internet a una red mesh perfecta. Respondieron en menos de 4 horas en una emergencia.</p>
+                        <div class="author">Carlos R.</div>
+                        <div class="company">Colegio Privado · Los Dos Caminos</div>
+                    </article>
+                    <article class="testimonial reveal d2">
+                        <div class="stars" aria-label="Calificación: 5 de 5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>El plan de mantenimiento nos ha ahorrado reparaciones costosas. La limpieza trimestral y los backups semanales valen cada mes.</p>
+                        <div class="author">Ana G.</div>
+                        <div class="company">Oficina Administrativa · El Recreo</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CATALOGO FLIPBOOK ==================== -->
+        <section id="catalogo" class="bg-light">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>Catálogo <span>Digital</span></h2>
+                    <p>Hojea nuestra oferta completa como un libro: arrastra la página derecha o usa los controles.</p>
+                </div>
+                <div class="catalog-shell reveal">
+                    <div id="book" aria-label="Catálogo de servicios de JK Tecnologi en formato libro">
+                        <div id="bkLeft" class="bk-page"></div>
+                        <div id="bkRight" class="bk-page"></div>
+                        <div id="bkTurn">
+                            <div class="face front"></div>
+                            <div class="face back"></div>
+                            <div class="shade"></div>
+                        </div>
+                    </div>
+                    <div class="bk-toolbar">
+                        <button id="bkPrev" class="btn btn-primary bk-btn" type="button">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+                            Anterior
+                        </button>
+                        <span class="bk-indicator" id="bkIndicator">1 / 3</span>
+                        <button id="bkNext" class="btn btn-primary bk-btn" type="button">
+                            Siguiente
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                        </button>
+                    </div>
+                    <p class="bk-hint">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 3 12 9 6"/><polyline points="15 6 21 12 15 18"/></svg>
+                        Arrastra, usa los botones o las flechas del teclado · ¿Lo quieres en PDF? <a href="https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20quiero%20el%20cat%C3%A1logo%20en%20PDF" target="_blank" rel="noopener">Pídelo por WhatsApp</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CTA ==================== -->
+        <section aria-label="Contacto y cotizacion">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <h2>&#191;Listo para blindar y potenciar tu operación?</h2>
+                    <p>Agenda hoy una auditoría gratuita de red y equipos. Recibe tu propuesta técnica en menos de 48 horas.</p>
+                    <div class="cta-actions">
+                        <a href="https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20quiero%20mi%20auditor%C3%ADa%20gratuita" class="btn btn-white" target="_blank" rel="noopener">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+                            Hablar por WhatsApp
+                        </a>
+                        <a href="mailto:hola@jktecnologi.com" class="btn btn-glass">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
+                            Escríbenos por correo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FAQ ==================== -->
+        <section id="faq" class="bg-light">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>Preguntas <span>Frecuentes</span></h2>
+                    <p>Resolvemos las dudas más comunes antes de empezar tu proyecto.</p>
+                </div>
+                <div class="faq-list reveal">
+                    <details>
+                        <summary>
+                            &#191;En qué zonas de Caracas trabajan?
+                            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chev"/></svg>
+                        </summary>
+                        <p class="answer">Atendemos principalmente Chacao, Baruta, El Hatillo, Libertador y Sucre. Para proyectos de mayor alcance evaluamos otras zonas del área metropolitana y del interior del país.</p>
+                    </details>
+                    <details>
+                        <summary>
+                            &#191;Qué incluye el mes de soporte gratuito?
+                            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chev"/></svg>
+                        </summary>
+                        <p class="answer">Al contratar cualquier paquete de infraestructura recibes un mes de soporte básico: atención remota ilimitada y ajustes de la instalación realizada, sin costo adicional.</p>
+                    </details>
+                    <details>
+                        <summary>
+                            &#191;Cómo funcionan los pagos?
+                            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chev"/></svg>
+                        </summary>
+                        <p class="answer">Los proyectos se pagan 50% al firmar el contrato y 50% contra entrega conformada. Los planes de soporte recurrente se facturan por adelantado cada mes.</p>
+                    </details>
+                    <details>
+                        <summary>
+                            &#191;Puedo contratar solo el desarrollo web?
+                            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chev"/></svg>
+                        </summary>
+                        <p class="answer">Sí. Cada línea de servicio se puede contratar por separado. Cotizamos según el alcance del proyecto y entregamos por hitos para que apruebes cada avance.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="logo" href="#inicio">
+                        <span class="logo-mark">JK</span>
+                        Tec<b>nologi</b>
+                    </a>
+                    <p>Infraestructura, soporte recurrente y desarrollo digital para empresas en Caracas.</p>
+                    <div class="social-row">
+                        <a href="#" aria-label="Instagram de JK Tecnologi" target="_blank" rel="noopener">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-ig"/></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn de JK Tecnologi" target="_blank" rel="noopener">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-in"/></svg>
+                        </a>
+                        <a href="https://wa.me/584120000000" aria-label="WhatsApp de JK Tecnologi" target="_blank" rel="noopener">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Servicios</h4>
+                    <div class="flinks">
+                        <a href="#paquetes">Infraestructura &amp; Redes</a>
+                        <a href="#soporte">Soporte Recurrente</a>
+                        <a href="#servicios">Desarrollo Web</a>
+                        <a href="https://wa.me/584120000000?text=Quiero%20mi%20auditor%C3%ADa%20gratuita" target="_blank" rel="noopener">Auditoria gratuita</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Empresa</h4>
+                    <div class="flinks">
+                        <a href="#proceso">Nuestro proceso</a>
+                        <a href="#testimonios">Testimonios</a>
+                        <a href="#faq">Preguntas frecuentes</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Contacto</h4>
+                    <div class="flinks">
+                        <a href="mailto:hola@jktecnologi.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>hola@jktecnologi.com</a>
+                        <a href="tel:+584120000000"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>+58 412 000 0000</a>
+                        <a href="#inicio"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Chacao · Las Mercedes · El Recreo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="year">2026</span> JK Tecnologi · Soluciones TI en Caracas. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Boton flotante de WhatsApp -->
+    <a class="wa-float" href="https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20necesito%20ayuda%20con%20mi%20tecnolog%C3%ADa" target="_blank" rel="noopener" aria-label="Chatea con nosotros por WhatsApp">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+    </a>
+
+    <!-- Simbolos de marcas (redes sociales) -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+        <symbol id="i-ig" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.02 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.02 8.33 0 8.74 0 12s.02 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.98 8.74 24 12 24s3.67-.02 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.05-1.28.07-1.69.07-4.95s-.02-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.02 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></symbol>
+        <symbol id="i-in" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    </svg>
+
+    <script>
+        (function () {
+            'use strict';
+
+            var header = document.getElementById('header');
+            var menuBtn = document.getElementById('menuBtn');
+            var navLinks = document.getElementById('navLinks');
+            var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            function closeMenu() {
+                navLinks.classList.remove('open');
+                header.classList.remove('menu-open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.setAttribute('aria-label', 'Abrir menu');
+            }
+
+            menuBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                var open = navLinks.classList.toggle('open');
+                header.classList.toggle('menu-open', open);
+                menuBtn.setAttribute('aria-expanded', String(open));
+                menuBtn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!header.contains(e.target)) closeMenu();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+            navLinks.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', closeMenu);
+            });
+
+            var onScroll = function () {
+                header.classList.toggle('scrolled', window.scrollY > 10);
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            /* Revelado al hacer scroll */
+            var revealEls = document.querySelectorAll('.reveal');
+            if (reducedMotion || !('IntersectionObserver' in window)) {
+                revealEls.forEach(function (el) { el.classList.add('in'); });
+            } else {
+                var revealObserver = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('in');
+                            revealObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+                revealEls.forEach(function (el) { revealObserver.observe(el); });
+            }
+
+            /* Resaltar enlace activo en la navegacion */
+            var sectionIds = ['inicio', 'servicios', 'paquetes', 'soporte', 'proceso', 'catalogo', 'faq'];
+            var linkMap = {};
+            navLinks.querySelectorAll('a:not(.btn)').forEach(function (a) {
+                var id = (a.getAttribute('href') || '').replace('#', '');
+                if (sectionIds.indexOf(id) !== -1) linkMap[id] = a;
+            });
+            if ('IntersectionObserver' in window) {
+                var navObserver = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting && linkMap[entry.target.id]) {
+                            Object.keys(linkMap).forEach(function (id) {
+                                linkMap[id].classList.toggle('active', id === entry.target.id);
+                            });
+                        }
+                    });
+                }, { rootMargin: '-45% 0px -50% 0px' });
+                sectionIds.forEach(function (id) {
+                    var sec = document.getElementById(id);
+                    if (sec) navObserver.observe(sec);
+                });
+            }
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+        })();
+    </script>
+    <script>
+        (function () {
+            'use strict';
+
+            var book = document.getElementById('book');
+            if (!book) return;
+
+            var L = document.getElementById('bkLeft');
+            var R = document.getElementById('bkRight');
+            var turn = document.getElementById('bkTurn');
+            var front = turn.querySelector('.face.front');
+            var back = turn.querySelector('.face.back');
+            var prevBtn = document.getElementById('bkPrev');
+            var nextBtn = document.getElementById('bkNext');
+            var ind = document.getElementById('bkIndicator');
+
+            var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var WA = 'https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20quiero%20el%20cat%C3%A1logo%20en%20PDF';
+            var chk = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>';
+            var ic = function (id) {
+                return '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-' + id + '"/></svg>';
+            };
+
+            /* ---------- Contenido de las 6 paginas ---------- */
+            var pages = [
+
+                /* 1 · Portada */
+                '<div class="pg pg-cover">' +
+                    '<span class="mark">JK</span>' +
+                    '<span class="pg-kicker">Caracas · Soluciones TI</span>' +
+                    '<h3>Catálogo de <span>Servicios</span></h3>' +
+                    '<p style="color:var(--muted);max-width:36ch;margin:2px 0 4px;">Infraestructura, soporte recurrente y desarrollo web para empresas que no pueden detenerse.</p>' +
+                    '<div style="width:56px;height:3px;background:linear-gradient(90deg,var(--brand),var(--cyan));border-radius:99px;margin:6px 0;"></div>' +
+                    '<p style="font-size:.8rem;color:var(--muted);">' + ic('pin') .replace('<svg ', '<svg style="display:inline-block;vertical-align:-.12em;width:.9em;height:.9em;" ') + ' Chacao · Las Mercedes · El Recreo<br/>Edición 2026</p>' +
+                    '<a class="btn btn-primary" style="padding:10px 22px;font-size:.85rem;margin-top:8px;" href="' + WA + '" target="_blank" rel="noopener">Solicitar cotización</a>' +
+                '</div>',
+
+                /* 2 · Lineas de servicio */
+                '<div class="pg">' +
+                    '<h3>Líneas de <span>Servicio</span></h3>' +
+                    '<div class="sub">Tres soluciones que cubren todo tu ciclo tecnológico.</div>' +
+                    '<ul class="pg-list">' +
+                        '<li>' + ic('server') + '<div><strong>Infraestructura &amp; Redes</strong><br/><span style="color:var(--muted);font-size:.85rem;">CCTV, cableado Cat6, Wi-Fi mesh y control de acceso.</span> <span class="badge">Llave en mano</span></div></li>' +
+                        '<li>' + ic('users') + '<div><strong>Soporte TI Recurrente</strong><br/><span style="color:var(--muted);font-size:.85rem;">Plan mensual con SLA presencial y atención remota.</span> <span class="badge">Desde 4 horas</span></div></li>' +
+                        '<li>' + ic('code') + '<div><strong>Desarrollo Digital &amp; Web</strong><br/><span style="color:var(--muted);font-size:.85rem;">Páginas web, portales y automatizaciones.</span> <span class="badge">Entrega por hitos</span></div></li>' +
+                    '</ul>' +
+                '</div>',
+
+                /* 3 · Paquete Entrada */
+                '<div class="pg">' +
+                    '<h3>Paquete <span>Entrada</span></h3>' +
+                    '<div class="sub">PyME Conectada &amp; Segura — comercios y consultorios</div>' +
+                    '<div class="pg-pkg">' +
+                        '<h4>' + ic('cctv') + ' CCTV + red básica<span class="tagpill">Entrada</span></h4>' +
+                        '<ul class="pg-list">' +
+                            '<li>' + chk + 'CCTV de 4 a 8 cámaras IP/HD con visualización remota</li>' +
+                            '<li>' + chk + 'Router corporativo + access point de alta densidad</li>' +
+                            '<li>' + chk + 'Diagnóstico eléctrico y verificación de UPS</li>' +
+                        '</ul>' +
+                        '<span class="incentive" style="font-size:.78rem;padding:7px 14px;">' + ic('gift') + 'Incluye 1 mes de soporte básico gratuito</span>' +
+                    '</div>' +
+                    '<p style="font-size:.8rem;color:var(--muted);">Instalación certificada con acta de entrega y garantía postventa.</p>' +
+                '</div>',
+
+                /* 4 · Paquete Pro */
+                '<div class="pg">' +
+                    '<h3>Paquete <span>Pro</span></h3>' +
+                    '<div class="sub">Red Corporativa Pro — oficinas, colegios y depósitos</div>' +
+                    '<div class="pg-pkg">' +
+                        '<h4>' + ic('wifi') + ' Red corporativa completa<span class="tagpill">Pro</span></h4>' +
+                        '<ul class="pg-list">' +
+                            '<li>' + chk + 'Cableado estructurado Cat6 certificable (ANSI/TIA)</li>' +
+                            '<li>' + chk + 'Wi-Fi mesh corporativo con roaming sin cortes</li>' +
+                            '<li>' + chk + 'Biometría, cerraduras magnéticas y VLANs segmentadas</li>' +
+                        '</ul>' +
+                        '<span class="incentive" style="font-size:.78rem;padding:7px 14px;">' + ic('zap') + 'Diseño escalable para múltiples ambientes</span>' +
+                    '</div>' +
+                    '<p style="font-size:.8rem;color:var(--muted);">Etiquetado profesional, pruebas de estrés e inducción al usuario.</p>' +
+                '</div>',
+
+                /* 5 · Planes de soporte */
+                '<div class="pg">' +
+                    '<h3>Planes de <span>Soporte</span></h3>' +
+                    '<div class="sub">Mantenimiento mensual por estación de trabajo.</div>' +
+                    '<div class="pg-cols">' +
+                        '<div class="pg-col">' +
+                            '<h4>Mantenimiento Base</h4>' +
+                            '<div class="pg-row"><b>Remota</b><span>Ilimitada 8–5</span></div>' +
+                            '<div class="pg-row"><b>SLA</b><span>&lt; 24 h hábiles</span></div>' +
+                            '<div class="pg-row"><b>Backups</b><span>Semanal</span></div>' +
+                            '<div class="pg-row"><b>Limpieza</b><span>Trimestral</span></div>' +
+                            '<div class="pg-row"><b>Infraestructura</b><span style="color:#94a3b8;">No incluida</span></div>' +
+                        '</div>' +
+                        '<div class="pg-col hl">' +
+                            '<h4>Operaciones Continuas <span class="badge" style="vertical-align:middle;">Recomendado</span></h4>' +
+                            '<div class="pg-row"><b>Remota</b><span style="color:var(--ok);font-weight:600;">Prioritaria 8–6</span></div>' +
+                            '<div class="pg-row"><b>SLA</b><span style="color:var(--ok);font-weight:600;">&lt; 4 horas</span></div>' +
+                            '<div class="pg-row"><b>Backups</b><span style="color:var(--ok);font-weight:600;">Diario automático</span></div>' +
+                            '<div class="pg-row"><b>Limpieza</b><span>Bimestral + lógica</span></div>' +
+                            '<div class="pg-row"><b>Infraestructura</b><span style="color:var(--ok);font-weight:600;">DVR · switch · POS</span></div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>',
+
+                /* 6 · Proceso + contacto */
+                '<div class="pg">' +
+                    '<h3>Cómo <span>trabajamos</span></h3>' +
+                    '<div class="sub">Cuatro fases, del diagnóstico a la entrega formal.</div>' +
+                    '<div class="pg-steps">' +
+                        '<div class="pg-step"><b>1</b>Levantamiento</div>' +
+                        '<div class="pg-step"><b>2</b>Propuesta y cierre</div>' +
+                        '<div class="pg-step"><b>3</b>Ejecución y calidad</div>' +
+                        '<div class="pg-step"><b>4</b>Entrega y postventa</div>' +
+                    '</div>' +
+                    '<div class="pg-cta">' +
+                        '<strong style="color:var(--ink);">¿Listo para empezar?</strong>' +
+                        '<span style="font-size:.85rem;color:var(--muted);">Auditoría gratuita de red y equipos.</span>' +
+                        '<a class="btn btn-wa" style="padding:11px 24px;font-size:.88rem;" href="' + WA.replace('cat%C3%A1logo%20en%20PDF', 'auditor%C3%ADa%20gratuita') + '" target="_blank" rel="noopener">' +
+                            '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>Hablar por WhatsApp</a>' +
+                        '<a href="mailto:hola@jktecnologi.com" style="font-size:.82rem;font-weight:600;color:var(--brand);text-decoration:none;">' + ic('mail').replace('<svg ', '<svg style="display:inline-block;vertical-align:-.12em;width:.95em;height:.95em;" ') + ' hola@jktecnologi.com</a>' +
+                    '</div>' +
+                '</div>'
+            ];
+
+            var total = pages.length;          /* 6 paginas */
+            var spreads = total / 2;           /* 3 hojas dobles */
+            var n = 0;                         /* hoja actual */
+            var busy = false;
+            var pending = null;
+            var timer = null;
+
+            function foot(pageIndex) {
+                return '<div class="pg-foot"><span>JK Tecnologi · Catálogo 2026</span><span>' + pageIndex + ' / ' + total + '</span></div>';
+            }
+            function pageHtml(i) { return pages[i] + foot(i + 1); }
+            function finPage() {
+                return '<div class="pg pg-fin"><div>' + ic('server') + 'Fin del catálogo<br/>¡Gracias por llegar hasta aquí!</div></div>';
+            }
+
+            function render() {
+                L.innerHTML = pageHtml(n * 2);
+                R.innerHTML = (n * 2 + 1 < total) ? pageHtml(n * 2 + 1) : finPage();
+                ind.textContent = (n + 1) + ' / ' + spreads;
+                prevBtn.disabled = (n === 0);
+                nextBtn.disabled = (n >= spreads - 1);
+                [L, R].forEach(function (el) { el.scrollTop = 0; });
+            }
+
+            function resetTurn() {
+                turn.style.transition = 'none';
+                turn.style.transform = 'rotateY(0deg)';
+                void turn.offsetWidth;
+                turn.style.transition = '';
+                turn.classList.remove('flipping');
+            }
+
+            function finishForward() {
+                clearTimeout(timer);
+                turn.removeEventListener('transitionend', onTurnEnd);
+                if (pending === 'forward') n++;
+                pending = null;
+                busy = false;
+                render();
+                resetTurn();
+            }
+
+            function onTurnEnd(e) {
+                if (e.target !== turn || e.propertyName !== 'transform') return;
+                finishForward();
+            }
+
+            function armFinish() {
+                clearTimeout(timer);
+                timer = setTimeout(finishForward, 800);
+                turn.addEventListener('transitionend', onTurnEnd);
+            }
+
+            function loadFaces() {
+                front.innerHTML = pageHtml(n * 2 + 1);
+                back.innerHTML = (n * 2 + 2 < total) ? pageHtml(n * 2 + 2) : finPage();
+            }
+
+            function next() {
+                if (busy || n >= spreads - 1) return;
+                busy = true;
+                pending = 'forward';
+                loadFaces();
+                if (reduced) { finishForward(); return; }
+                turn.classList.add('flipping');
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+                        turn.style.transform = 'rotateY(-180deg)';
+                    });
+                });
+                armFinish();
+            }
+
+            function prev() {
+                if (busy || n === 0) return;
+                if (reduced) { n--; render(); return; }
+                busy = true;
+                L.style.opacity = '0';
+                R.style.opacity = '0';
+                setTimeout(function () {
+                    n--;
+                    render();
+                    L.style.opacity = '1';
+                    R.style.opacity = '1';
+                    busy = false;
+                }, 180);
+            }
+
+            /* ---------- Arrastre (Pointer Events: mouse + touch) ---------- */
+            var dragging = false;
+            var startX = 0;
+            var angle = 0;
+
+            function maxDrag() { return book.offsetWidth * 0.6; }
+
+            book.addEventListener('pointerdown', function (e) {
+                if (busy || n >= spreads - 1) return;
+                if (e.target.closest && e.target.closest('a, button')) return;
+                dragging = true;
+                startX = e.clientX;
+                angle = 0;
+                loadFaces();
+                turn.classList.add('dragging', 'flipping');
+                try { book.setPointerCapture(e.pointerId); } catch (err) {}
+                e.preventDefault();
+            });
+
+            book.addEventListener('pointermove', function (e) {
+                if (!dragging) return;
+                var dx = startX - e.clientX;
+                var ratio = Math.min(Math.max(dx, 0), maxDrag()) / maxDrag();
+                angle = -ratio * 180;
+                turn.style.transform = 'rotateY(' + angle + 'deg)';
+            });
+
+            function endDrag() {
+                if (!dragging) return;
+                dragging = false;
+                turn.classList.remove('dragging');
+                busy = true;
+                if (angle <= -70) {
+                    pending = 'forward';
+                    turn.style.transform = 'rotateY(-180deg)';
+                    armFinish();
+                } else {
+                    pending = null;
+                    turn.style.transform = 'rotateY(0deg)';
+                    setTimeout(function () {
+                        turn.classList.remove('flipping');
+                        busy = false;
+                    }, reduced ? 0 : 400);
+                }
+            }
+
+            book.addEventListener('pointerup', endDrag);
+            book.addEventListener('pointercancel', endDrag);
+
+            prevBtn.addEventListener('click', prev);
+            nextBtn.addEventListener('click', next);
+
+            document.addEventListener('keydown', function (e) {
+                if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) return;
+                var rect = book.getBoundingClientRect();
+                var visible = rect.top < window.innerHeight * 0.75 && rect.bottom > window.innerHeight * 0.25;
+                if (!visible) return;
+                if (e.key === 'ArrowRight') next();
+                else if (e.key === 'ArrowLeft') prev();
+            });
+
+            render();
+        })();
+    </script>
+
+</body>
+</html>
