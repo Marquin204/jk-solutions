@@ -451,6 +451,12 @@
         .nav-links > a:hover,
         .nav-links > a.active { color: var(--brand); }
         .nav-links .btn { min-height: 44px; padding: 10px 22px; font-size: 0.9rem; }
+        .nav-links > a.btn-primary,
+        .nav-links > a.btn-primary:hover,
+        .nav-links > a.btn-primary:focus-visible {
+            color: #fff;
+            font-weight: 600;
+        }
 
         .menu-btn {
             display: none;
@@ -2305,22 +2311,31 @@
                 return '<div class="pg pg-fin"><div>' + ic('server') + 'Fin del catálogo<br/>¡Gracias por llegar hasta aquí!</div></div>';
             }
 
-            function render() {
+            function updateControls() {
                 if (single) {
-                    L.innerHTML = pageHtml(n);
                     ind.textContent = (n + 1) + ' / ' + total;
                     prevBtn.disabled = (n === 0);
                     nextBtn.disabled = (n >= total - 1);
+                } else {
+                    ind.textContent = (n + 1) + ' / ' + spreads;
+                    prevBtn.disabled = (n === 0);
+                    nextBtn.disabled = (n >= spreads - 1);
+                }
+            }
+
+            function render() {
+                turn.style.visibility = '';
+                if (single) {
+                    L.innerHTML = pageHtml(n);
                     L.scrollTop = 0;
+                    updateControls();
                     return;
                 }
                 L.innerHTML = pageHtml(n * 2);
                 R.innerHTML = (n * 2 + 1 < total) ? pageHtml(n * 2 + 1) : finPage();
                 loadFaces();
-                ind.textContent = (n + 1) + ' / ' + spreads;
-                prevBtn.disabled = (n === 0);
-                nextBtn.disabled = (n >= spreads - 1);
                 [L, R].forEach(function (el) { el.scrollTop = 0; });
+                updateControls();
             }
 
             function resetTurn() {
@@ -2331,30 +2346,82 @@
                 turn.classList.remove('flipping');
             }
 
-            function finishForward() {
+            function setFace(el, html) {
+                el.innerHTML = html;
+                el.scrollTop = 0;
+            }
+
+            function loadFaces() {
+                setFace(front, pageHtml(n * 2 + 1));
+                setFace(back, (n * 2 + 2 < total) ? pageHtml(n * 2 + 2) : finPage());
+            }
+
+            function prepareForward() {
+                loadFaces();
+                var nextRight = n * 2 + 3;
+                R.innerHTML = (nextRight < total) ? pageHtml(nextRight) : finPage();
+                R.scrollTop = 0;
+            }
+
+            function prepareBackward() {
+                var prevN = n - 1;
+                turn.style.visibility = 'hidden';
+                turn.style.transition = 'none';
+                setFace(front, pageHtml(prevN * 2 + 1));
+                setFace(back, pageHtml(n * 2));
+                turn.style.transform = 'rotateY(-180deg)';
+                void turn.offsetWidth;
+                turn.style.transition = '';
+                turn.style.visibility = '';
+                L.innerHTML = pageHtml(prevN * 2);
+                L.scrollTop = 0;
+            }
+
+            function finishTurn() {
+                if (!pending) return;
+                var direction = pending;
+                pending = null;
                 clearTimeout(timer);
                 turn.removeEventListener('transitionend', onTurnEnd);
-                if (pending === 'forward') n++;
-                pending = null;
-                busy = false;
-                render();
-                resetTurn();
+                if (direction === 'forward') finishForward();
+                else finishBackward();
             }
 
             function onTurnEnd(e) {
                 if (e.target !== turn || e.propertyName !== 'transform') return;
-                finishForward();
+                finishTurn();
             }
 
             function armFinish() {
                 clearTimeout(timer);
-                timer = setTimeout(finishForward, 800);
+                timer = setTimeout(finishTurn, 800);
                 turn.addEventListener('transitionend', onTurnEnd);
             }
 
-            function loadFaces() {
-                front.innerHTML = pageHtml(n * 2 + 1);
-                back.innerHTML = (n * 2 + 2 < total) ? pageHtml(n * 2 + 2) : finPage();
+            function finishForward() {
+                var newN = n + 1;
+                L.innerHTML = pageHtml(newN * 2);
+                L.scrollTop = 0;
+                turn.style.visibility = 'hidden';
+                n = newN;
+                loadFaces();
+                resetTurn();
+                turn.style.visibility = '';
+                updateControls();
+                busy = false;
+            }
+
+            function finishBackward() {
+                var newN = n - 1;
+                R.innerHTML = pageHtml(newN * 2 + 1);
+                R.scrollTop = 0;
+                turn.style.visibility = 'hidden';
+                n = newN;
+                loadFaces();
+                resetTurn();
+                turn.style.visibility = '';
+                updateControls();
+                busy = false;
             }
 
             function next() {
@@ -2366,10 +2433,16 @@
                     return;
                 }
                 if (n >= spreads - 1) return;
+                if (reduced) {
+                    n++;
+                    render();
+                    resetTurn();
+                    return;
+                }
                 busy = true;
                 pending = 'forward';
-                loadFaces();
-                if (reduced) { finishForward(); return; }
+                prepareForward();
+                turn.style.transition = '';
                 turn.classList.add('flipping');
                 requestAnimationFrame(function () {
                     requestAnimationFrame(function () {
@@ -2386,17 +2459,22 @@
                     render();
                     return;
                 }
-                if (reduced) { n--; render(); return; }
-                busy = true;
-                L.style.opacity = '0';
-                R.style.opacity = '0';
-                setTimeout(function () {
+                if (reduced) {
                     n--;
                     render();
-                    L.style.opacity = '1';
-                    R.style.opacity = '1';
-                    busy = false;
-                }, 180);
+                    resetTurn();
+                    return;
+                }
+                busy = true;
+                pending = 'backward';
+                prepareBackward();
+                turn.classList.add('flipping');
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+                        turn.style.transform = 'rotateY(0deg)';
+                    });
+                });
+                armFinish();
             }
 
             /* ---------- Arrastre (Pointer Events: mouse + touch) ---------- */
@@ -2417,12 +2495,14 @@
                     try { book.setPointerCapture(e.pointerId); } catch (err) {}
                     return;
                 }
+                if (reduced) return;
                 if (busy || n >= spreads - 1) return;
+                busy = true;
                 dragging = true;
                 startX = e.clientX;
                 angle = 0;
                 dragWidth = book.offsetWidth;
-                loadFaces();
+                prepareForward();
                 turn.classList.add('dragging', 'flipping');
                 try { book.setPointerCapture(e.pointerId); } catch (err) {}
                 e.preventDefault();
@@ -2437,6 +2517,13 @@
                 turn.style.transform = 'rotateY(' + angle + 'deg)';
             });
 
+            function restoreForwardCancel() {
+                R.innerHTML = pageHtml(n * 2 + 1);
+                R.scrollTop = 0;
+                turn.classList.remove('flipping');
+                busy = false;
+            }
+
             function endDrag() {
                 if (!dragging) return;
                 dragging = false;
@@ -2449,10 +2536,12 @@
                 } else {
                     pending = null;
                     turn.style.transform = 'rotateY(0deg)';
-                    setTimeout(function () {
-                        turn.classList.remove('flipping');
-                        busy = false;
-                    }, reduced ? 0 : 400);
+                    if (reduced || Math.abs(angle) < 1) {
+                        restoreForwardCancel();
+                        return;
+                    }
+                    clearTimeout(timer);
+                    timer = setTimeout(restoreForwardCancel, 720);
                 }
             }
 
@@ -2491,8 +2580,11 @@
                 n = 0;
                 busy = false;
                 pending = null;
+                dragging = false;
+                swipeActive = false;
                 clearTimeout(timer);
                 turn.removeEventListener('transitionend', onTurnEnd);
+                turn.classList.remove('dragging');
                 resetTurn();
                 render();
             }
