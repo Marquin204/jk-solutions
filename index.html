@@ -52,6 +52,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
+    <!-- Temporal: email deshabilitado hasta contar con un correo.
+         Restaurar dentro del JSON-LD: "email": "hola@jktecnologi.com",
+    -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -75,7 +78,6 @@
             "height": 630
           },
           "telephone": "+58 424-2799843",
-          "email": "hola@jktecnologi.com",
           "contactPoint": [
             {
               "@type": "ContactPoint",
@@ -1938,10 +1940,12 @@
                             <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
                             Hablar por WhatsApp
                         </a>
+                        <!-- Temporal: botón de correo deshabilitado hasta contar con un correo.
                         <a href="mailto:hola@jktecnologi.com" class="btn btn-glass">
                             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
                             Escríbenos por correo
                         </a>
+                        -->
                     </div>
                 </div>
             </div>
@@ -2259,7 +2263,8 @@
                         '<span style="font-size:.85rem;color:var(--muted);">Auditoría gratuita de red y equipos.</span>' +
                         '<a class="btn btn-wa" style="padding:11px 24px;font-size:.88rem;" href="' + WA.replace('cat%C3%A1logo%20en%20PDF', 'auditor%C3%ADa%20gratuita') + '" target="_blank" rel="noopener">' +
                             '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>Hablar por WhatsApp</a>' +
-                        '<a href="mailto:hola@jktecnologi.com" style="font-size:.82rem;font-weight:600;color:var(--brand);text-decoration:none;">' + ic('mail').replace('<svg ', '<svg style="display:inline-block;vertical-align:-.12em;width:.95em;height:.95em;" ') + ' hola@jktecnologi.com</a>' +
+                        // Temporal: enlace de correo deshabilitado hasta contar con un correo.
+                        // '<a href="mailto:hola@jktecnologi.com" style="font-size:.82rem;font-weight:600;color:var(--brand);text-decoration:none;">' + ic('mail').replace('<svg ', '<svg style="display:inline-block;vertical-align:-.12em;width:.95em;height:.95em;" ') + ' hola@jktecnologi.com</a>' +
                     '</div>' +
                 '</div>'
             ];
