@@ -9,16 +9,16 @@
       1. WhatsApp: busca "584120000000" (formato internacional sin +)
       2. Teléfono visible: "+58 412 000 0000"
       3. Email: "hola@jktecnologi.com"
-      4. Redes sociales: enlaces "#" del footer
+      4. Redes sociales: iconos decorativos (sin enlaces) en el footer
       5. Dominio: "https://www.jktecnologi.com" (canonical y JSON-LD)
       ============================================================
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JK Tecnologi · Redes, CCTV y Soporte TI en Caracas</title>
+    <title>JK Solutions · Redes, CCTV y Soporte TI en Caracas</title>
     <meta name="description" content="Infraestructura de redes, CCTV, Wi-Fi mesh, soporte técnico recurrente con SLA y desarrollo web para empresas en Caracas. Agenda tu auditoría gratuita.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-    <meta name="author" content="JK Tecnologi">
+    <meta name="author" content="JK Solutions">
     <meta name="geo.region" content="VE-A">
     <meta name="geo.placename" content="Caracas">
     <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -26,20 +26,20 @@
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_VE">
-    <meta property="og:site_name" content="JK Tecnologi">
-    <meta property="og:title" content="JK Tecnologi · Redes, CCTV y Soporte TI en Caracas">
+    <meta property="og:site_name" content="JK Solutions">
+    <meta property="og:title" content="JK Solutions · Redes, CCTV y Soporte TI en Caracas">
     <meta property="og:description" content="Infraestructura, CCTV, soporte recurrente con SLA y desarrollo web para tu empresa. Cotiza gratis por WhatsApp.">
     <meta property="og:url" content="https://www.jktecnologi.com/">
     <meta property="og:image" content="https://www.jktecnologi.com/og-image.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="JK Tecnologi: infraestructura y soporte TI que mantiene tu negocio en línea">
+    <meta property="og:image:alt" content="JK Solutions: infraestructura y soporte TI que mantiene tu negocio en línea">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JK Tecnologi · Redes, CCTV y Soporte TI en Caracas">
+    <meta name="twitter:title" content="JK Solutions · Redes, CCTV y Soporte TI en Caracas">
     <meta name="twitter:description" content="Infraestructura, CCTV, soporte recurrente con SLA y desarrollo web para empresas en Caracas.">
     <meta name="twitter:image" content="https://www.jktecnologi.com/og-image.png">
-    <meta name="twitter:image:alt" content="JK Tecnologi: infraestructura y soporte TI en Caracas">
+    <meta name="twitter:image:alt" content="JK Solutions: infraestructura y soporte TI en Caracas">
     <meta name="theme-color" content="#0b1220">
 
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -59,7 +59,7 @@
         {
           "@type": "ProfessionalService",
           "@id": "https://www.jktecnologi.com/#organization",
-          "name": "JK Tecnologi",
+          "name": "JK Solutions",
           "description": "Infraestructura de redes, CCTV, soporte técnico TI recurrente y desarrollo web para empresas en Caracas.",
           "url": "https://www.jktecnologi.com/",
           "logo": {
@@ -127,7 +127,7 @@
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Servicios de JK Tecnologi",
+            "name": "Servicios de JK Solutions",
             "itemListElement": [
               {
                 "@type": "Offer",
@@ -160,7 +160,7 @@
           "@type": "WebSite",
           "@id": "https://www.jktecnologi.com/#website",
           "url": "https://www.jktecnologi.com/",
-          "name": "JK Tecnologi",
+          "name": "JK Solutions",
           "inLanguage": "es-VE",
           "publisher": { "@id": "https://www.jktecnologi.com/#organization" }
         },
@@ -1106,7 +1106,7 @@
             vertical-align: -0.12em;
         }
         .social-row { display: flex; gap: 12px; }
-        .social-row a {
+        .social-row span {
             display: grid;
             place-items: center;
             width: 44px;
@@ -1116,12 +1116,6 @@
             color: #cbd5e1;
             transition: all 0.25s ease;
         }
-        .social-row a:hover {
-            background: var(--brand);
-            border-color: var(--brand);
-            color: #fff;
-            transform: translateY(-3px);
-        }
         .social-row .icon { width: 19px; height: 19px; }
         .footer-bottom {
             border-top: 1px solid rgba(148, 163, 184, 0.15);
@@ -1130,25 +1124,6 @@
             font-size: 0.87rem;
             color: #94a3b8;
         }
-
-        /* --- WhatsApp flotante --- */
-        .wa-float {
-            position: fixed;
-            right: max(22px, env(safe-area-inset-right));
-            bottom: max(22px, env(safe-area-inset-bottom));
-            z-index: 1200;
-            display: grid;
-            place-items: center;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            background: var(--wa);
-            color: #fff;
-            box-shadow: 0 12px 30px -8px rgba(37, 211, 102, 0.65);
-            transition: transform 0.25s ease, background-color 0.2s ease;
-        }
-        .wa-float:hover { transform: scale(1.08); background: #1fb457; }
-        .wa-float .icon { width: 28px; height: 28px; }
 
         /* --- Animaciones de scroll --- */
         .reveal {
@@ -1612,9 +1587,9 @@
     <!-- ==================== HEADER ==================== -->
     <header id="header">
         <div class="container nav-container">
-            <a class="logo" href="#inicio" aria-label="JK Tecnologi, ir al inicio">
+            <a class="logo" href="#inicio" aria-label="JK Solutions, ir al inicio">
                 <img class="logo-mark" src="logo-mark.png" alt="" width="176" height="133">
-                <span>Tec<b>nologi</b></span>
+                <span>Sol<b>utions</b></span>
             </a>
             <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
                 <svg class="ic-menu icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -1627,7 +1602,7 @@
                 <a href="#proceso">Proceso</a>
                 <a href="#catalogo">Catálogo</a>
                 <a href="#faq">FAQ</a>
-                <a href="https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20quiero%20una%20cotizaci%C3%B3n" class="btn btn-primary" target="_blank" rel="noopener">Cotizar gratis</a>
+                <a href="https://wa.me/584120000000?text=Hola%20JK%20Solutions,%20quiero%20una%20cotizaci%C3%B3n" class="btn btn-primary" target="_blank" rel="noopener">Cotizar gratis</a>
             </nav>
         </div>
     </header>
@@ -1644,12 +1619,12 @@
                     </span>
                     <h1>Infraestructura y <span class="grad">soporte TI</span> que mantiene tu negocio en línea</h1>
                     <p class="lead">
-                        En <strong>JK Tecnologi</strong> diseñamos, instalamos y damos soporte a la tecnología de tu empresa en Caracas:
+                        En <strong>JK Solutions</strong> diseñamos, instalamos y damos soporte a la tecnología de tu empresa en Caracas:
                         redes, CCTV, Wi-Fi, respaldos y desarrollo web. Un solo equipo para toda tu operación digital.
                     </p>
                     <div class="hero-actions">
                         <a href="#paquetes" class="btn btn-primary">Ver paquetes</a>
-                        <a href="https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20quiero%20cotizar%20un%20servicio" class="btn btn-outline" target="_blank" rel="noopener">
+                        <a href="https://wa.me/584120000000?text=Hola%20JK%20Solutions,%20quiero%20cotizar%20un%20servicio" class="btn btn-outline" target="_blank" rel="noopener">
                             <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
                             Cotiza por WhatsApp
                         </a>
@@ -1922,9 +1897,9 @@
                 </div>
                 <div class="catalog-shell reveal">
                     <noscript>
-                        <p class="catalog-noscript">El catálogo interactivo requiere JavaScript. <a href="https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20quiero%20el%20cat%C3%A1logo%20en%20PDF" target="_blank" rel="noopener">Solicítalo por WhatsApp</a> y te lo enviamos en PDF.</p>
+                        <p class="catalog-noscript">El catálogo interactivo requiere JavaScript. <a href="https://wa.me/584120000000?text=Hola%20JK%20Solutions,%20quiero%20el%20cat%C3%A1logo%20en%20PDF" target="_blank" rel="noopener">Solicítalo por WhatsApp</a> y te lo enviamos en PDF.</p>
                     </noscript>
-                    <div id="book" role="region" aria-roledescription="catálogo interactivo" aria-label="Catálogo de servicios de JK Tecnologi en formato libro" aria-describedby="bkHint" tabindex="0">
+                    <div id="book" role="region" aria-roledescription="catálogo interactivo" aria-label="Catálogo de servicios de JK Solutions en formato libro" aria-describedby="bkHint" tabindex="0">
                         <div id="bkLeft" class="bk-page"></div>
                         <div id="bkRight" class="bk-page"></div>
                         <div id="bkTurn">
@@ -1946,7 +1921,7 @@
                     </div>
                     <p class="bk-hint" id="bkHint">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 3 12 9 6"/><polyline points="15 6 21 12 15 18"/></svg>
-                        Arrastra, usa los botones o las flechas del teclado · ¿Lo quieres en PDF? <a href="https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20quiero%20el%20cat%C3%A1logo%20en%20PDF" target="_blank" rel="noopener">Pídelo por WhatsApp</a>
+                        Arrastra, usa los botones o las flechas del teclado · ¿Lo quieres en PDF? <a href="https://wa.me/584120000000?text=Hola%20JK%20Solutions,%20quiero%20el%20cat%C3%A1logo%20en%20PDF" target="_blank" rel="noopener">Pídelo por WhatsApp</a>
                     </p>
                 </div>
             </div>
@@ -1959,7 +1934,7 @@
                     <h2>&#191;Listo para blindar y potenciar tu operación?</h2>
                     <p>Agenda hoy una auditoría gratuita de red y equipos. Recibe tu propuesta técnica en menos de 48 horas.</p>
                     <div class="cta-actions">
-                        <a href="https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20quiero%20mi%20auditor%C3%ADa%20gratuita" class="btn btn-white" target="_blank" rel="noopener">
+                        <a href="https://wa.me/584120000000?text=Hola%20JK%20Solutions,%20quiero%20mi%20auditor%C3%ADa%20gratuita" class="btn btn-white" target="_blank" rel="noopener">
                             <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
                             Hablar por WhatsApp
                         </a>
@@ -2019,21 +1994,21 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a class="logo" href="#inicio" aria-label="JK Tecnologi, ir al inicio">
+                    <a class="logo" href="#inicio" aria-label="JK Solutions, ir al inicio">
                         <img class="logo-mark" src="logo-mark.png" alt="" width="176" height="133">
-                        <span>Tec<b>nologi</b></span>
+                        <span>Sol<b>utions</b></span>
                     </a>
                     <p>Infraestructura, soporte recurrente y desarrollo digital para empresas en Caracas.</p>
-                    <div class="social-row">
-                        <a href="#" aria-label="Instagram de JK Tecnologi" target="_blank" rel="noopener">
+                    <div class="social-row" aria-hidden="true">
+                        <span>
                             <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-ig"/></svg>
-                        </a>
-                        <a href="#" aria-label="LinkedIn de JK Tecnologi" target="_blank" rel="noopener">
+                        </span>
+                        <span>
                             <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-in"/></svg>
-                        </a>
-                        <a href="https://wa.me/584120000000" aria-label="WhatsApp de JK Tecnologi" target="_blank" rel="noopener">
+                        </span>
+                        <span>
                             <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
-                        </a>
+                        </span>
                     </div>
                 </div>
                 <div>
@@ -2056,22 +2031,15 @@
                 <div>
                     <h4>Contacto</h4>
                     <div class="flinks">
-                        <a href="mailto:hola@jktecnologi.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>hola@jktecnologi.com</a>
-                        <a href="tel:+584120000000"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>+58 412 000 0000</a>
                         <a href="https://www.google.com/maps/search/?api=1&amp;query=Chacao%2C%20Caracas%2C%20Venezuela" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Chacao · Las Mercedes · El Recreo</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; <span id="year">2026</span> JK Tecnologi · Soluciones TI en Caracas. Todos los derechos reservados.
+                &copy; <span id="year">2026</span> JK Solutions · Soluciones TI en Caracas. Todos los derechos reservados.
             </div>
         </div>
     </footer>
-
-    <!-- Boton flotante de WhatsApp -->
-    <a class="wa-float" href="https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20necesito%20ayuda%20con%20mi%20tecnolog%C3%ADa" target="_blank" rel="noopener" aria-label="Chatea con nosotros por WhatsApp">
-        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
-    </a>
 
     <!-- Simbolos de marcas (redes sociales) -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
@@ -2189,7 +2157,7 @@
             var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             var mqSingle = window.matchMedia('(max-width: 760px)');
             var single = mqSingle.matches;
-            var WA = 'https://wa.me/584120000000?text=Hola%20JK%20Tecnologi,%20quiero%20el%20cat%C3%A1logo%20en%20PDF';
+            var WA = 'https://wa.me/584120000000?text=Hola%20JK%20Solutions,%20quiero%20el%20cat%C3%A1logo%20en%20PDF';
             var chk = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>';
             var ic = function (id) {
                 return '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-' + id + '"/></svg>';
@@ -2200,7 +2168,7 @@
 
                 /* 1 · Portada */
                 '<div class="pg pg-cover">' +
-                    '<img class="mark" src="logo-mark.png" alt="JK Tecnologi" width="176" height="133">' +
+                    '<img class="mark" src="logo-mark.png" alt="JK Solutions" width="176" height="133">' +
                     '<span class="pg-kicker">Caracas · Soluciones TI</span>' +
                     '<h3>Catálogo de <span>Servicios</span></h3>' +
                     '<p style="color:var(--muted);max-width:36ch;margin:2px 0 4px;">Infraestructura, soporte recurrente y desarrollo web para empresas que no pueden detenerse.</p>' +
@@ -2304,7 +2272,7 @@
             var timer = null;
 
             function foot(pageIndex) {
-                return '<div class="pg-foot"><span>JK Tecnologi · Catálogo 2026</span><span>' + pageIndex + ' / ' + total + '</span></div>';
+                return '<div class="pg-foot"><span>JK Solutions · Catálogo 2026</span><span>' + pageIndex + ' / ' + total + '</span></div>';
             }
             function pageHtml(i) { return pages[i] + foot(i + 1); }
             function finPage() {
